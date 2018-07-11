@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Arch Linux Simple Image
+Description=This is a plymouth theme which simply displays an image
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/simple-image
+ScriptFile=/usr/share/plymouth/themes/simple-image/simple-image.script
