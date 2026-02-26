@@ -1,15 +1,22 @@
+
 image = Image("img.png");
-
-pos_x = Window.GetWidth()/2 - image.GetWidth()/2;
-pos_y = Window.GetHeight()/2 - image.GetHeight()/2;
-
-sprite = Sprite(image);
-sprite.SetX(pos_x);
-sprite.SetY(pos_y);
+sprite = Sprite();
+sprite.SetImage(image);
+sprite.SetOpacity(1);
+sprite.SetZ(15);
 
 fun refresh_callback () {
-  sprite.SetOpacity(1);
-  spr.SetZ(15);
+  screen_width = Window.GetWidth();
+  screen_height = Window.GetHeight();
+  
+  img_width = image.GetWidth();
+  img_height = image.GetHeight();
+
+  target_x = (screen_width / 2) - (img_width / 2);
+  target_y = (screen_height / 2) - (img_height / 2);
+ 
+  sprite.SetX(target_x);
+  sprite.SetY(target_y);
 }
 
 Plymouth.SetRefreshFunction (refresh_callback);
